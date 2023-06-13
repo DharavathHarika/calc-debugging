@@ -1,0 +1,8 @@
+# ninja log v5
+2	275	1686608094270345083	build.ninja	3f799139baad3c41
+1116	1339	7082073284082509	calc_debugging.exe	c66ff3d3d7ce3da1
+1	373	1686608111524247952	CMakeFiles/calc_debugging.dir/parser.cpp.o	1ed54f1d6b5ca253
+1	378	1686608111529007397	CMakeFiles/calc_debugging.dir/op.cpp.o	a2e31118e439c17d
+0	386	1686608111536828419	CMakeFiles/calc_debugging.dir/lexer.cpp.o	91e62395421e8339
+0	415	1686608111565676456	CMakeFiles/calc_debugging.dir/calc.cpp.o	5d463a0667068272
+415	452	1686608111604930898	calc_debugging	927528c5ae67bdd2

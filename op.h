@@ -208,6 +208,14 @@ public:
     virtual void print(int depth) const;
 };
 
+class Pos: public UnaryOp
+{
+public:
+    Pos(LexerToken _token);
+    virtual Result eval();
+    virtual void print(int depth) const;
+};
+
 
 // A Literal Number
 class Number: public ParseTree

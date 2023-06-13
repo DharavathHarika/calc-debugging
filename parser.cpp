@@ -203,12 +203,24 @@ ParseTree *Parser::parse_base()
         must_be(RPAREN);
         next();
         return result;
-    } else if(has(MINUS)) {
+    }
+    else if(has(MINUS)) {
         Neg *result = new Neg(curtok());
+        next();
+        if(has(LPAREN)){
+            result->child(parse_base());
+        }else {
+            result->child(parse_number());
+        }
+        return result;
+    }
+    else if(has(PLUS)){
+        Pos *result = new Pos(curtok());
         next();
         result->child(parse_expression());
         return result;
-    } else {
+    }
+    else {
         return parse_number();
     }
 }

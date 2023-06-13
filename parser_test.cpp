@@ -3,6 +3,9 @@
 #include <fstream>
 #include "lexer.h"
 #include "parser.h"
+#include "lexer.cpp"
+#include "parser.cpp"
+
 
 
 int main(int argc, char **argv) {

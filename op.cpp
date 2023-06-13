@@ -425,9 +425,13 @@ Neg::Neg(LexerToken _token) : UnaryOp(_token)
     // This space left intentionally blank
 }
 
-
-Result Neg::eval()
+Pos::Pos(LexerToken _token) : UnaryOp(_token)
 {
+    // This space left intentionally blank
+}
+
+
+Result Neg::eval() {
     //eval the child and then negate it
     Result result = child()->eval();
     NUM_ASSIGN(result, -NUM_RESULT(result));
@@ -435,11 +439,29 @@ Result Neg::eval()
     return result;
 }
 
+Result Pos::eval()
+{
+    //eval the child and then positve it
+    Result result = child()->eval();
+    NUM_ASSIGN(result, -NUM_RESULT(result));
+
+    return result;
+}
+
+
+
 
 void Neg::print(int depth) const
 {
     print_prefix(depth);
     std::cout << "NEG: -" << std::endl;
+    child()->print(depth+1);
+}
+
+void Pos::print(int depth) const
+{
+    print_prefix(depth);
+    std::cout << "POS: +" << std::endl;
     child()->print(depth+1);
 }
 
